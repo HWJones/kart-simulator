@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kart Simulator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Kart Performance Simulator</h1>
+        
+        <div class="simulator-inputs">
+            <div class="input-group">
+                <label for="raceDistance">Race Distance (m)</label>
+                <input type="number" id="raceDistance" value="100" min="10" max="2000">
+            </div>
+            <div class="input-group">
+                <label for="teeth1">Driving Gear Teeth</label>
+                <input type="number" id="teeth1" value="12" min="8" max="20">
+            </div>
+            <div class="input-group">
+                <label for="teeth2">Driven Gear Teeth</label>
+                <input type="number" id="teeth2" value="36" min="20" max="60">
+            </div>
+            <div class="input-group">
+                <label for="mass">Mass (kg)</label>
+                <input type="number" id="mass" value="150" min="100" max="300">
+            </div>
+            <div class="input-group">
+                <label for="dragCoef">Drag Coefficient</label>
+                <input type="number" id="dragCoef" value="0.5" min="0.2" max="1.0" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="wheelRadius">Wheel Radius (m)</label>
+                <input type="number" id="wheelRadius" value="0.127" min="0.1" max="0.15" step="0.001">
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="startRace">Race Kart! 🏁</button>
+            <button id="resetRace" class="reset">Reset ↺</button>
+        </div>
+
+        <div class="race-info">
+            <div class="kart-track">
+                <div class="kart" id="kartAnimation">🏎️</div>
+                <div class="finish-line"></div>
+            </div>
+            <div class="metrics">
+                <div class="metric-box">
+                    <label>Time:</label>
+                    <span id="raceTime">0.00s</span>
+                </div>
+                <div class="metric-box">
+                    <label>Top Speed:</label>
+                    <span id="topSpeed">0.0 km/h</span>
+                </div>
+                <div class="metric-box">
+                    <label>Max Acceleration:</label>
+                    <span id="maxAccel">0.0 m/s²</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="simulation-output">
+            <div id="speedGraph" class="graph">
+                <canvas></canvas>
+            </div>
+            <div id="accelerationGraph" class="graph">
+                <canvas></canvas>
+            </div>
+            <div id="engineSpeedGraph" class="graph">
+                <canvas></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/simulator.js"></script>
+</body>
+</html>
