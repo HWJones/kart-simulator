@@ -50,3 +50,117 @@ button {
 button:hover {
     background: #45a049;
 }
+
+.graph {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 300px;
+}
+.race-info {
+    margin: 20px 0;
+}
+
+.kart-track {
+    height: 60px;
+    background: #f0f0f0;
+    border-radius: 30px;
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.kart {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-size: 24px;
+    transition: transform 0.1s linear;
+}
+
+.finish-line {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: repeating-linear-gradient(
+        45deg,
+        #000,
+        #000 10px,
+        #fff 10px,
+        #fff 20px
+    );
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.metric-box {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric-box label {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.metric-box span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Add this to your button styles */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button.reset {
+    background: #6c757d;
+}
+
+button.save-config {
+    background: #007bff;
+}
+
+.saved-configs {
+    margin: 20px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button.reset {
+    background: #6c757d;
+}
+
+.kart {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-size: 24px;
+    transform: scaleX(-1); /* Flip the kart emoji to face right */
+    transition: left 3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth animation */
+}
+
+.kart.racing {
+    left: calc(100% - 30px); /* Move to just before finish line */
+}
