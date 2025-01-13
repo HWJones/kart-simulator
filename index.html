@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kart Simulator</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Kart Simulator</h1>
+    <div class="container">
+        <h1>Kart Performance Simulator</h1>
+        
+        <div class="simulator-inputs">
+            <div class="input-group">
+                <label for="raceDistance">Race Distance (m)</label>
+                <input type="number" id="raceDistance" value="100">
+            </div>
+            
+            <div class="input-group">
+                <label for="teeth1">Driving Gear Teeth</label>
+                <input type="number" id="teeth1" value="12">
+            </div>
+            
+            <div class="input-group">
+                <label for="teeth2">Driven Gear Teeth</label>
+                <input type="number" id="teeth2" value="36">
+            </div>
+        </div>
+        
+        <button id="startRace">Race Kart!</button>
+        
+        <div id="simulation-output">
+            <!-- Graphs will go here -->
+        </div>
+    </div>
+    
+    <script src="js/simulator.js"></script>
 </body>
 </html>
